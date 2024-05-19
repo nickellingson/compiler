@@ -15,8 +15,11 @@ func main () {
 	testFile := "../../precompiled/test1.txt"
 
 	// Read file
-	fileInputOutput.ReadFile(testFile)
+	result := fileInputOutput.ReadFile(testFile)
 
 	// Lexical Analysis
-	lexicalAnalysis.Tokenize()
+	lexicalAnalysis.Tokenize(result)
+
+
+	
 }
