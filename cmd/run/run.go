@@ -9,17 +9,18 @@ import (
 
 
 func main () {
-	fmt.Println("start of main")
+	fmt.Println("Start of main")
 
 	// testFile, _ := filepath.Abs("../../precompiled/test1.txt")
 	testFile := "../../precompiled/test1.txt"
 
+	fmt.Println("Calling file input output")
 	// Read file
 	result := fileInputOutput.ReadFile(testFile)
 
+	fmt.Println("Calling lexical analysis")
 	// Lexical Analysis
-	lexicalAnalysis.Tokenize(result)
+	tokenList := lexicalAnalysis.Tokenize(result)
 
-
-	
+	fmt.Println(tokenList)
 }
